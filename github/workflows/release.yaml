@@ -1,8 +1,8 @@
 name: Release
 on:
-  push:
-    tags:
-      - '*.*.*-kafka-*.*.*-aws-*.*.*'
+  push: 
+    branch: main
+  pull_request:
 jobs:  
   docker_push:
     runs-on: ubuntu-20.04
