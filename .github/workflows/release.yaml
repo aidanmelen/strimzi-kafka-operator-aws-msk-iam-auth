@@ -32,7 +32,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          platforms: linux/amd64,linux/arm/v7
           build-args: |
             STRIMZI_VERSION=${{ matrix.strimzi_version }}
             KAFKA_VERSION=${{ matrix.kafka_version }}
