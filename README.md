@@ -3,7 +3,7 @@
 This repository contains a pattern for extending the `kafka-base` image from the [strimzi-kafka-operator](https://github.com/strimzi/strimzi-kafka-operator/tree/main/docker-images/kafka-based) to support SASL/IAM authentication mechanism for AWS MSK.
 
 
-This pattern utilizes hardcoded authentication mechanism properties for SASL/IAM, thus rendering the spec.authentication.mechanism values will be ignored.
+This pattern utilizes hardcoded authentication mechanism properties for SASL/IAM, thus rendering the `spec.authentication.mechanism` values will be ignored.
 
 ## Examples
 
