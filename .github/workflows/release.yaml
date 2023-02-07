@@ -31,10 +31,10 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm/v7
-          build-args: 
-            - STRIMZI_VERSION=${{ matrix.strimzi_version }}
-            - KAFKA_VERSION=${{ matrix.kafka_version }}
-            - AWS_MSK_IAM_AUTH_VERSION=${{ matrix.aws_msk_iam_auth_version }}
+          build-args: |
+            STRIMZI_VERSION=${{ matrix.strimzi_version }}
+            KAFKA_VERSION=${{ matrix.kafka_version }}
+            AWS_MSK_IAM_AUTH_VERSION=${{ matrix.aws_msk_iam_auth_version }}
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/strimzi-kafka-operator-aws-msk-iam-auth:latest
             ${{ secrets.DOCKER_HUB_USERNAME }}/strimzi-kafka-operator-aws-msk-iam-auth:${{ matrix.strimzi_version }}-kafka-${{ matrix.kafka_version }}-aws-${{ matrix.aws_msk_iam_auth_version }}
