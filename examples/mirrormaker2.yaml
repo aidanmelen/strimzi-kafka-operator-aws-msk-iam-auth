@@ -3,7 +3,7 @@ kind: KafkaMirrorMaker2
 metadata:
   name: my-mirror-maker-2
 spec:
-  image: aidanmelen/strimzi-kafka-operator-aws-msk-iam-auth:0.33.0-kafka-3.3.2-aws-1.1.6
+  image: aidanmelen/strimzi-kafka-operator-aws-msk-iam-auth:0.33.0-kafka-3.3.2-aws-latest
   replicas: 1
   bootstrapServers: "${BOOTSTRAP_BROKERS_SASL_IAM}"
   template:
