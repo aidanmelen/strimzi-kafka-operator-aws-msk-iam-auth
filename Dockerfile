@@ -1,7 +1,6 @@
-ARG STRIMZI_VERSION="0.32.0"
-ARG KAFKA_VERSION="3.3.1"
+ARG STRIMZI_KAFKA_TAG="0.33.0-kafka-3.3.2"
 
-FROM quay.io/strimzi/kafka:${STRIMZI_VERSION}-kafka-${KAFKA_VERSION}
+FROM quay.io/strimzi/kafka:${STRIMZI_KAFKA_TAG}
 
 ARG AWS_MSK_IAM_AUTH_VERSION="1.1.6"
 ENV CLASSPATH=/opt/kafka/libs/aws-msk-iam-auth-${AWS_MSK_IAM_AUTH_VERSION}-all.jar

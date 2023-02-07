@@ -3,7 +3,7 @@ kind: KafkaConnect
 metadata:
   name: my-connect
 spec:
-  image: aidanmelen/strimzi-kafka-operator-aws-msk-iam-auth:0.32.0-kafka-3.3.1-1.1.6
+  image: aidanmelen/strimzi-kafka-operator-aws-msk-iam-auth:0.32.0-kafka-3.3.1-aws-1.1.6
   replicas: 1
   bootstrapServers: "${BOOTSTRAP_BROKERS_SASL_IAM}"
   template:
