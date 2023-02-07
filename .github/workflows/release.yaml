@@ -1,7 +1,9 @@
 name: Release
 on:
+  workflow_dispatch:
   push: 
-    branch: main
+    branches:
+      - main
   pull_request:
 jobs:  
   docker_push:
