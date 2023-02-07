@@ -15,16 +15,16 @@ kind: KafkaConnect
 metadata:
   name: my-connect
 spec:
-  image: aidanmelen/strimzi-kafka-operator-aws-msk-iam-auth:0.32.0-kafka-3.3.1-1.1.6
+  image: aidanmelen/strimzi-kafka-operator-aws-msk-iam-auth:0.33.0-kafka-3.3.2-aws-latest
   replicas: 1
   bootstrapServers: "${BOOTSTRAP_BROKERS_SASL_IAM}"
+  config:
+    group.id: connect-cluster
+    offset.storage.topic: _connect-storage
+    config.storage.topic: _connect-offset
+    status.storage.topic: _connect-status
   template:
-    config:
-      group.id: connect-cluster
-      offset.storage.topic: _connect-storage
-      config.storage.topic: _connect-offset
-      status.storage.topic: _connect-status
-
+  
     # Uncomment for EKS IRSA credentials
     # serviceAccount:
     #   metadata:
